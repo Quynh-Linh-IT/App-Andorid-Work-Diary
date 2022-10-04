@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listTodoDay"
+    android:orientation="vertical"
+    android:background="#FFF7EA">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:src="@drawable/bannerbac" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/btnAddCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edtbg"
+            android:hint="Thêm công việc"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/btnAddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            app:fabSize="mini"
+            app:maxImageSize="30dp"
+            android:background="#FFA968"
+            app:srcCompat="@drawable/ic_baseline_add_circle_24"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="22/03/2021"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+
+    <ListView
+        android:id="@+id/Todolayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:divider="#00FFFFFF"
+        android:dividerHeight="0.0px">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserInfor"
+    android:background="#FFF7EA">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:src="@drawable/sieumong" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="40dp"
+        android:layout_weight="10">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="150dp"
+            android:elevation="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/avtImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/person"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/usnamTv"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/anonymous_pro_bold_italic"
+            />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/birthday"
+            android:text="birthday"
+            android:drawableLeft="@drawable/birthday"
+            style="@style/user_item"
+            />
+
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="telephone"
+            android:drawableLeft="@drawable/phone"
+            style="@style/user_item"/>
+
+        <TextView
+            android:id="@+id/hobb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/hobby"
+            android:text="Hobby"
+            style="@style/user_item"/>
+
+        <TextView
+            android:id="@+id/EditInf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa thông tin"
+            style="@style/user_item"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/dangxuat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            style="@style/user_item"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/calendar"
+            android:id="@+id/cldNV"
+            android:text="Home"
+            android:textAlignment="center"
+            >
+        </TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/list"
+            android:id="@+id/todoNV"
+            android:text="Todo List"
+            android:textAlignment="center"
+           ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/dinary"
+            android:id="@+id/dnrNV"
+            android:textAlignment="center"
+            android:text="Dinary"></TextView
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/person"
+            android:id="@+id/prNV"
+            android:textAlignment="center"
+            android:text="User"
+            android:drawableTint="#E9761E"
+            android:textColor="#E9761E"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listTodo1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF7EA"
+    tools:context=".ListTodo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:src="@drawable/sieumong" />
+
+            <TextView
+                android:id="@+id/tvDay"
+                style="@style/titlefont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhiệm vụ ngày hôm nay?"
+                android:textColor="@color/black" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boder_radius">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/boder_radius"
+                    android:weightSum="0">
+
+                    <TextView
+                        style="@style/fontDiem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:text="Mục tiêu"
+                        android:textAlignment="center"
+                        android:textColor="#FF4D4D"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/fontDiem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:text="Đã hoàn thành"
+                        android:textAlignment="center"
+                        android:textColor="#20B8FF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/fontDiem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:text="Chưa hoàn thành"
+                        android:textColor="#A034FF" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tong"
+                        style="@style/point"
+                        android:background="@drawable/cell_shape"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/done"
+                        style="@style/point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/miss"
+                        style="@style/point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Danh sách công việc cần làm"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/Todolayout"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_margin="10dp"
+                android:divider="#00FFFFFF"
+                android:dividerHeight="0.0px"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp"
+                android:layout_weight="4"
+                ></ListView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/add"
+                app:backgroundTint="#fff"
+                app:fabSize="mini"
+                app:maxImageSize="40dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            >
+
+            <TextView
+                android:id="@+id/cldNV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/calendar"
+                android:text="Home"
+                android:textAlignment="center"></TextView>
+
+
+            <TextView
+                android:id="@+id/todoNV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/list"
+                android:drawableTint="#E9761E"
+                android:text="Todo List"
+                android:textAlignment="center"
+                android:textColor="#E9761E"></TextView>
+
+            <TextView
+                android:id="@+id/dnrNV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/dinary"
+                android:text="Dinary"
+                android:textAlignment="center"></TextView>
+
+            <TextView
+                android:id="@+id/prNV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/person"
+                android:text="User"
+                android:textAlignment="center"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
